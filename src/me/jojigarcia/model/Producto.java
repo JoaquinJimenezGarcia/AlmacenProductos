@@ -1,5 +1,7 @@
 package me.jojigarcia.model;
 
+import java.util.Comparator;
+
 /**
  * Created by joaquinjimenezgarcia on 10/5/17.
  */
@@ -76,4 +78,11 @@ public class Producto {
                 ", volumen = " + volumen +
                 " )";
     }
+
+    public static Comparator<Producto> comparadorPorPeso = new Comparator<Producto>() {
+        @Override
+        public int compare(Producto p1, Producto p2) {
+            return (int)p1.getPeso() - (int)p2.getPeso();
+        }
+    };
 }
