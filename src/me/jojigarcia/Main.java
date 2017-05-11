@@ -1,8 +1,12 @@
 package me.jojigarcia;
 
+import me.jojigarcia.controller.AlmacenApp;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        AlmacenApp almacenApp = new AlmacenApp();
+
+        almacenApp.run();
     }
 }
