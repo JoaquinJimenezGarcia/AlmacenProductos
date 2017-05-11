@@ -73,7 +73,7 @@ public class Producto {
     public String toString() {
         return "Producto( " +
                 "nombre = " + nombre +
-                ", categoria = " + categoria +
+                ", categoria = " + categoria.getCategoria() +
                 ", peso = " + peso + " km" +
                 ", volumen = " + volumen + " cm3" +
                 " )";

@@ -76,7 +76,7 @@ public class AlmacenApp {
         do {
             System.out.println("Inserte peso: ");
             peso = input.nextDouble();
-        }while (peso <= 0);
+        }while (peso <= 0.0);
 
         do {
             System.out.println("Inserte volumen: ");
