@@ -1,6 +1,7 @@
 package me.jojigarcia.model;
 
 import java.util.Comparator;
+import java.util.Objects;
 
 /**
  * Created by joaquinjimenezgarcia on 10/5/17.
@@ -77,6 +78,17 @@ public class Producto {
                 ", peso = " + peso + " km" +
                 ", volumen = " + volumen + " cm3" +
                 " )";
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        if (this == obj){ return true; }
+        if (obj == null){ return false;}
+        if (this.getClass() != obj.getClass()){ return false; }
+
+        Producto p = (Producto)obj;
+
+        return Objects.equals(this.getNombre(), p.getNombre());
     }
 
     public static Comparator<Producto> comparadorPorPeso = new Comparator<Producto>() {
