@@ -19,8 +19,20 @@ public class Almacen {
         }
     }
 
-    public void mostrarProductos(){
-        Collections.sort(productos, Producto.comparadorPorPeso);
+    public void mostrarProductos(int tipoComparador){
+        switch (tipoComparador){
+            case 1:
+                Collections.sort(productos, Producto.comparadorPorPeso);
+                break;
+            case 2:
+                Collections.sort(productos, Producto.comparadorPorNombre);
+                break;
+            case 3:
+                Collections.sort(productos, Producto.comparadorPorNombrePeso);
+                break;
+            default:
+                break;
+        }
 
         for (Producto producto: productos){
             System.out.println(producto);

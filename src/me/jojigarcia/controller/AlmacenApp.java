@@ -26,7 +26,17 @@ public class AlmacenApp {
                     break;
                 case 2:
                     if (almacen.longitud()>0){
-                        almacen.mostrarProductos();
+                        almacen.mostrarProductos(1);
+                    }
+                    break;
+                case 3:
+                    if (almacen.longitud()>0){
+                        almacen.mostrarProductos(2);
+                    }
+                    break;
+                case 4:
+                    if (almacen.longitud()>0){
+                        almacen.mostrarProductos(3);
                     }
                     break;
                 default:
@@ -92,14 +102,15 @@ public class AlmacenApp {
         Scanner input = new Scanner(System.in);
         int option;
 
-        System.out.println("***********************************");
-        System.out.println("* 1. Registrar producto           *");
+        System.out.println("******************************************");
+        System.out.println("* 1. Registrar producto                  *");
         if (almacen.longitud()>0) {
-            System.out.println("* 2. Mostrar productos por peso   *");
-            System.out.println("* 3. Mostrar productos por nombre *");
+            System.out.println("* 2. Mostrar productos por peso          *");
+            System.out.println("* 3. Mostrar productos por nombre        *");
+            System.out.println("* 4. Mostrar productos por nombre y peso *");
         }
-        System.out.println("* 0. Salir                        *");
-        System.out.println("***********************************");
+        System.out.println("* 0. Salir                               *");
+        System.out.println("******************************************");
 
         System.out.println("Opción: ");
         option = input.nextInt();

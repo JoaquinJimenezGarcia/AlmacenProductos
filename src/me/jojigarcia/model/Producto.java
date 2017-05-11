@@ -85,4 +85,26 @@ public class Producto {
             return (int)p1.getPeso() - (int)p2.getPeso();
         }
     };
+
+    public static Comparator<Producto> comparadorPorNombre = new Comparator<Producto>() {
+        @Override
+        public int compare(Producto p1, Producto p2) {
+            return p1.getNombre().compareToIgnoreCase(p2.getNombre());
+        }
+    };
+
+    public static Comparator<Producto> comparadorPorNombrePeso = new Comparator<Producto>() {
+        @Override
+        public int compare(Producto p1, Producto p2) {
+            int res;
+
+            res = p1.getNombre().compareToIgnoreCase(p2.getNombre());
+
+            if (res != 0){
+                return res;
+            }
+
+            return (int)p1.getPeso() - (int)p2.getPeso();
+        }
+    };
 }
