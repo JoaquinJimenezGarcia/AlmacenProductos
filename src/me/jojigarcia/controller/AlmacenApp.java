@@ -51,27 +51,27 @@ public class AlmacenApp {
 
         do {
             for (Categoria cat: Categoria.values()){
-                System.out.println(cat.toString());
+                System.out.println((cat.ordinal() +1) + " - " + cat.toString());
             }
 
-            System.out.println("Inserte categoriaSS: ");
+            System.out.println("Inserte categoria: ");
             indiceCategoria = input.nextInt();
+        }while (indiceCategoria <= 0 || indiceCategoria >= 4);
 
-            switch (indiceCategoria) {
-                case 1:
-                    categoria = Categoria.ELECTRONICA;
-                    break;
-                case 2:
-                    categoria = Categoria.INFORMATICA;
-                    break;
-                case 3:
-                    categoria = Categoria.VIDEOJUEGOS;
-                    break;
-                default:
-                    categoria = Categoria.VIDEOJUEGOS;
-                    break;
-            }
-        }while (indiceCategoria <= 1 && indiceCategoria >= 3);
+        switch (indiceCategoria) {
+            case 1:
+                categoria = Categoria.INFORMATICA;
+                break;
+            case 2:
+                categoria = Categoria.ELECTRONICA;
+                break;
+            case 3:
+                categoria = Categoria.VIDEOJUEGOS;
+                break;
+            default:
+                categoria = Categoria.VIDEOJUEGOS;
+                break;
+        }
 
         do {
             System.out.println("Inserte peso: ");
@@ -92,13 +92,14 @@ public class AlmacenApp {
         Scanner input = new Scanner(System.in);
         int option;
 
-        System.out.println("****************************");
-        System.out.println("* 1. Registrar producto    *");
+        System.out.println("***********************************");
+        System.out.println("* 1. Registrar producto           *");
         if (almacen.longitud()>0) {
-            System.out.println("* 2. Mostrar productos     *");
+            System.out.println("* 2. Mostrar productos por peso   *");
+            System.out.println("* 3. Mostrar productos por nombre *");
         }
-        System.out.println("* 0. Salir                 *");
-        System.out.println("****************************");
+        System.out.println("* 0. Salir                        *");
+        System.out.println("***********************************");
 
         System.out.println("Opción: ");
         option = input.nextInt();

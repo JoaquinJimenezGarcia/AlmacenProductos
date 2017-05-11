@@ -74,8 +74,8 @@ public class Producto {
         return "Producto( " +
                 "nombre = " + nombre +
                 ", categoria = " + categoria +
-                ", peso = " + peso +
-                ", volumen = " + volumen +
+                ", peso = " + peso + " km" +
+                ", volumen = " + volumen + " cm3" +
                 " )";
     }
 
