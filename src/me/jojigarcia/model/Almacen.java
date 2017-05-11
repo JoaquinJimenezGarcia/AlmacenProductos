@@ -14,8 +14,15 @@ public class Almacen {
     }
 
     public void sumarProducto(Producto producto){
+
+        if (productos.contains(producto)){
+            System.out.println("Produto ya registrado anteriormente. No se registrará.");
+            producto = null;
+        }
+
         if (producto != null){
             productos.add(producto);
+            System.out.println("Produto registrado con éxito");
         }
     }
 
